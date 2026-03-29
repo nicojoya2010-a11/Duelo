@@ -799,7 +799,7 @@ function procesarYPublicar(action){
   }
  
   ns.log=[...(ns.log||[]),...logs].slice(-60);
-  set(ref(db,`rooms/${roomId}`),ns);
+ update(ref(db,`rooms/${roomId}`),ns);
 }
  
 // ── Contrato helpers ──
@@ -886,10 +886,12 @@ function syncEstado(data){
     }
  
     // Clear the event after processing (only the active player clears)
-    if(isMyTurn()) update(ref(db,`rooms/${roomId}`),{pendingEvent:null});
+    setTimeout(()=>{
+  update(ref(db,`rooms/${roomId}`),{pendingEvent:null});
+}, 100);
   }
 }
- 
+
 // ══ END ══
 function mostrarFin(data){ const iWon=data.winner===mySlot; const xpG=iWon?80:30,coinG=iWon?50:15; const prevLv=getLevel(ME.xp); ME.xp+=xpG; ME.coins+=coinG; saveME(); const newLv=getLevel(ME.xp),lvUp=newLv>prevLv; sw('screen-end'); document.getElementById('end-title').textContent=iWon?'VICTORIA':'DERROTA'; document.getElementById('end-title').style.color=iWon?'var(--gold2)':'var(--red)'; document.getElementById('end-winner-text').textContent=`${data[data.winner]?.name||'?'} gana el duelo`; document.getElementById('end-rewards').innerHTML=`<div class="end-rewards-title">Recompensas obtenidas</div><div class="reward-row"><span>XP ganada</span><span class="reward-val">+${xpG} XP</span></div><div class="reward-row"><span>Monedas</span><span class="reward-val">+${coinG} ⬡</span></div><div class="reward-row"><span>Nivel actual</span><span class="reward-val">LVL ${newLv}${lvUp?' ⬆ SUBISTE!':''}</span></div><div class="reward-row"><span>Monedas totales</span><span class="reward-val">⬡ ${ME.coins}</span></div>`; document.getElementById('end-stats').innerHTML=`<div class="stat-box"><span class="stat-val">${Math.max(0,data[mySlot]?.hp||0)}</span>HP restante</div><div class="stat-box"><span class="stat-val">LVL ${newLv}</span>Mi nivel</div><div class="stat-box"><span class="stat-val">⬡ ${ME.coins}</span>Mis monedas</div>`; try{remove(ref(db,`rooms/${roomId}`));}catch(e){} limpiarRoom(); }
  
@@ -933,3 +935,4 @@ get(ref(db,'queue')).then(snap=>{ if(snap.exists()) Object.entries(snap.val()).f
 </script>
 </body>
 </html>
+
