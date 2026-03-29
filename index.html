@@ -711,7 +711,7 @@ function procesarYPublicar(action){
     if(dmg>0) rivP2.hp=Math.max(0,rivP2.hp-dmg);
     const ex=extras.length?` (${extras.join(', ')})` : '';
     logs.push({msg:`${myP2.name} usa ${atk.n} → ${dmg} daño${ex}`,tipo:mySlot==='p1'?'blue':'red'});
-    ns.pendingEvent={key:evKey,type:'dmg',dmg,targetSlot:rivSlot(),who:mySlot};
+    ns.pendingEvent={key:evKey,type:'dmg',dmg,targetSlot:rivSlot()};
     // Contrato hit
     tickContratoHit(myP2,rivP2,logs,ns);
     // Rueda del Juicio tick
@@ -730,7 +730,7 @@ function procesarYPublicar(action){
     else{myP2.bruja.activo=true;myP2.bruja.efecto=ef;}
     logs.push({msg:`⚗ ${myP2.name} → Factor Bruja: ${ef.desc}`,tipo:'curse'});
     ns.pendingEvent={key:evKey,type:'bruja',ef,who:mySlot};
-    changeTurn=false;
+    changeTurn=true;
  
   } else if(action.type==='dominio'){
     myP2.dominio.cargas--;
@@ -743,9 +743,10 @@ function procesarYPublicar(action){
       const dpas=Math.round(rivP2.hp*0.30);
       if(rivP2.domInmune){ logs.push({msg:`🛡 ${rivP2.name} es inmune al dominio (Rueda)`,tipo:'flash'}); }
       else { rivP2.hp=Math.max(0,rivP2.hp-dpas); logs.push({msg:`🔥 ${myP2.name}: "${myP2.dom}" — ${dpas} daño pasivo`,tipo:'gold'}); }
+      // Broadcast to BOTH clients via pendingEvent
       ns.pendingEvent={key:evKey,type:'dominio',who:mySlot,domName:myP2.dom,dmg:dpas};
     }
-    changeTurn=false;
+    changeTurn=true;
  
   } else if(action.type==='contrato'){
     myP2.contrato.cargas--; myP2.contrato.activo=true; myP2.contrato.pairIdx=action.pairIdx;
@@ -773,18 +774,18 @@ function procesarYPublicar(action){
     if(rivP2.tecnicaInv){rivP2.hp=Math.min(rivP2.maxHp,rivP2.hp+dmg);rivP2.tecnicaInv=false;dmg=0;}
     if(dmg>0)rivP2.hp=Math.max(0,rivP2.hp-dmg);
     logs.push({msg:`⏳ ${myP2.name} → Paradoja: ${dmg} daño (60% de ${origAtk.n})`,tipo:'flash'});
-    ns.pendingEvent={key:evKey,type:'dmg',dmg,targetSlot:rivSlot(),who:mySlot};
+    ns.pendingEvent={key:evKey,type:'dmg',dmg,targetSlot:rivSlot()};
  
   } else if(action.type==='tecnica_invertida'){
     myP2.tecnicaInv=true;
     logs.push({msg:`💠 ${myP2.name} activa Técnica Invertida — absorberá el próximo daño`,tipo:'flash'});
-    ns.pendingEvent={key:evKey,type:'generic',title:'TÉCNICA INVERTIDA',body:`${myP2.name} convertirá el próximo daño en curación`,who:mySlot};
+    ns.pendingEvent={key:evKey,type:'generic',title:'TÉCNICA INVERTIDA',body:`${myP2.name} convertirá el próximo daño en curación`};
     changeTurn=false;
  
   } else if(action.type==='ruptura_dominio'){
     rivP2.dominio.activo=false; rivP2.dominio.left=0;
     logs.push({msg:`💥 ${myP2.name} rompe el dominio de ${rivP2.name}!`,tipo:'gold'});
-    ns.pendingEvent={key:evKey,type:'generic',title:'RUPTURA DE DOMINIO',body:`El dominio de ${rivP2.name} ha sido cancelado`,who:mySlot};
+    ns.pendingEvent={key:evKey,type:'generic',title:'RUPTURA DE DOMINIO',body:`El dominio de ${rivP2.name} ha sido cancelado`};
     changeTurn=false;
   }
  
@@ -884,12 +885,8 @@ function syncEstado(data){
       setTimeout(()=>cerrarOverlay('overlay-generic'),2200);
     }
  
-    // Only the player who GENERATED the event clears it — avoids race condition
-    // ev.who is set for dominio/bruja/rueda. For attack events (dmg) the attacker
-    // is whoever just played (= the player whose turn it WAS, now it's rival's turn).
-    // We use a dedicated flag: if ev.clearedBy is already my slot, skip.
-    const iAmSender = ev.who ? ev.who===mySlot : G.turn===rivSlot();
-    if(iAmSender&&roomId) update(ref(db,`rooms/${roomId}`),{pendingEvent:null});
+    // Clear the event after processing (only the active player clears)
+    if(isMyTurn()) update(ref(db,`rooms/${roomId}`),{pendingEvent:null});
   }
 }
  
