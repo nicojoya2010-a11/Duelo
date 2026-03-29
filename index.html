@@ -23,6 +23,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 #screen-shop{flex-direction:column;align-items:center;padding:2rem 1rem;gap:1.5rem;}
 #screen-game{flex-direction:column;align-items:center;padding:1.5rem 1rem;gap:1.2rem;}
 #screen-end{flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:2rem;text-align:center;}
+ 
 .setup-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,6rem);letter-spacing:.15em;color:var(--white);text-shadow:0 0 40px rgba(138,0,255,.4);line-height:1;text-align:center;}
 .setup-title span{color:var(--curse);}
 .setup-sub{font-family:'Share Tech Mono',monospace;font-size:.8rem;color:var(--dim);letter-spacing:.2em;text-transform:uppercase;}
@@ -64,16 +65,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .queue-pulse{width:12px;height:12px;border-radius:50%;background:var(--green);animation:qPulse 1.2s ease infinite;display:inline-block;}
 @keyframes qPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.4);opacity:.5;}}
 .queue-timer{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--dim);}
-.shop-header{width:100%;max-width:900px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.shop-header{width:100%;max-width:960px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .shop-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:.15em;}
 .shop-wallet{font-family:'Share Tech Mono',monospace;font-size:.85rem;color:var(--coin);}
-.shop-grid{width:100%;max-width:900px;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;}
-.shop-card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:1.2rem;display:flex;flex-direction:column;gap:.8rem;transition:border-color .2s;}
+.shop-grid{width:100%;max-width:960px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem;}
+.shop-card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:1.2rem;display:flex;flex-direction:column;gap:.7rem;transition:border-color .2s;}
 .shop-card:hover{border-color:var(--gold);}
 .shop-card.owned{border-color:var(--green);opacity:.7;}
-.shop-icon{font-size:2rem;}
-.shop-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.08em;}
-.shop-desc{font-family:'Crimson Pro',serif;font-size:.85rem;color:var(--dim);font-style:italic;line-height:1.4;flex:1;}
+.shop-icon{font-size:1.8rem;}
+.shop-name{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:.08em;}
+.shop-desc{font-family:'Crimson Pro',serif;font-size:.82rem;color:var(--dim);font-style:italic;line-height:1.4;flex:1;}
 .shop-price{font-family:'Share Tech Mono',monospace;font-size:.8rem;color:var(--coin);}
 .shop-tag{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;padding:.2rem .5rem;border-radius:2px;align-self:flex-start;}
 .shop-tag.poder{background:rgba(138,0,255,.2);color:var(--curse);}
@@ -84,7 +85,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .shop-tabs{display:flex;gap:.5rem;}
 .shop-tab{font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.15em;background:transparent;border:1px solid var(--border);color:var(--dim);padding:.4rem 1rem;cursor:pointer;border-radius:2px;transition:all .2s;text-transform:uppercase;}
 .shop-tab.active{border-color:var(--gold);color:var(--gold);}
-.arena-top{width:100%;max-width:900px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;}
+.arena-top{width:100%;max-width:920px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;}
 .fighter-hud{display:flex;flex-direction:column;gap:.4rem;}
 .fighter-hud.p2-hud{align-items:flex-end;}
 .fighter-name{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;}
@@ -100,7 +101,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .turn-banner{font-family:'Share Tech Mono',monospace;font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;padding:.4rem 1.4rem;border:1px solid;border-radius:2px;transition:all .3s;}
 .turn-banner.p1-turn{color:var(--p1);border-color:var(--p1);box-shadow:0 0 12px rgba(26,127,255,.2);}
 .turn-banner.p2-turn{color:var(--p2);border-color:var(--p2);box-shadow:0 0 12px rgba(255,31,69,.2);}
-.battle-area{width:100%;max-width:900px;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.battle-area{width:100%;max-width:920px;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .player-panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:1.2rem;display:flex;flex-direction:column;gap:1rem;transition:all .3s;}
 .player-panel.active-panel{border-color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.1);}
 .panel-title{font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;}
@@ -117,19 +118,20 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .pip.full{background:var(--curse);box-shadow:0 0 6px rgba(138,0,255,.6);}
 .poderes-title{font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;}
 .poderes-grid{display:flex;flex-direction:column;gap:.5rem;}
-.poder-btn{background:transparent;border:1px solid var(--border);color:var(--white);font-family:'Crimson Pro',serif;padding:.55rem .8rem;cursor:pointer;border-radius:3px;display:flex;align-items:center;gap:.6rem;transition:all .2s;text-align:left;width:100%;}
+.poder-btn{background:transparent;border:1px solid var(--border);color:var(--white);font-family:'Crimson Pro',serif;padding:.5rem .7rem;cursor:pointer;border-radius:3px;display:flex;align-items:center;gap:.6rem;transition:all .2s;text-align:left;width:100%;}
 .poder-btn:hover:not(:disabled){transform:translateX(3px);}
 .poder-btn:disabled{opacity:.25;cursor:not-allowed;}
-.poder-icon{font-size:1.1rem;min-width:1.5rem;text-align:center;}
+.poder-icon{font-size:1rem;min-width:1.4rem;text-align:center;}
 .poder-info{display:flex;flex-direction:column;gap:.1rem;flex:1;}
-.poder-name{font-size:.9rem;font-weight:600;}
-.poder-desc{font-size:.75rem;color:var(--dim);font-style:italic;}
-.poder-charges{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--gold);white-space:nowrap;}
+.poder-name{font-size:.88rem;font-weight:600;}
+.poder-desc{font-size:.72rem;color:var(--dim);font-style:italic;}
+.poder-charges{font-family:'Share Tech Mono',monospace;font-size:.65rem;color:var(--gold);white-space:nowrap;}
 .poder-btn.bruja:hover:not(:disabled){border-color:var(--curse);background:rgba(138,0,255,.06);}
 .poder-btn.dominio:hover:not(:disabled){border-color:var(--gold);background:rgba(201,168,76,.06);}
 .poder-btn.contrato:hover:not(:disabled){border-color:var(--green);background:rgba(0,229,160,.06);}
-.poder-btn.especial:hover:not(:disabled){border-color:var(--flash);background:rgba(74,247,255,.06);}
-.battle-log{width:100%;max-width:900px;background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:1rem 1.2rem;min-height:70px;max-height:100px;overflow-y:auto;display:flex;flex-direction:column;gap:.3rem;}
+.poder-btn.especial:hover:not(:disabled){border-color:var(--flash);background:rgba(74,247,255,.05);}
+.poder-btn.rueda:hover:not(:disabled){border-color:var(--curse);background:rgba(138,0,255,.08);}
+.battle-log{width:100%;max-width:920px;background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:1rem 1.2rem;min-height:70px;max-height:110px;overflow-y:auto;display:flex;flex-direction:column;gap:.3rem;}
 .log-entry{font-family:'Share Tech Mono',monospace;font-size:.75rem;color:var(--dim);animation:fadeIn .3s ease;}
 .log-entry.important{color:var(--white);}
 .log-entry.gold{color:var(--gold);}
@@ -144,12 +146,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .end-rewards-title{font-family:'Share Tech Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;}
 .reward-row{display:flex;justify-content:space-between;align-items:center;font-family:'Share Tech Mono',monospace;font-size:.8rem;}
 .reward-val{color:var(--gold2);}
-.end-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,8vw,5rem);letter-spacing:.15em;color:var(--gold2);text-shadow:0 0 40px rgba(255,224,138,.3);}
+.end-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,8vw,5rem);letter-spacing:.15em;text-shadow:0 0 40px rgba(255,224,138,.3);}
 .end-winner{font-family:'Crimson Pro',serif;font-size:1.4rem;font-style:italic;}
-.end-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;}
+.end-stats{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;}
 .stat-box{background:var(--panel);border:1px solid var(--border);padding:1rem 1.5rem;border-radius:4px;font-family:'Share Tech Mono',monospace;font-size:.8rem;color:var(--dim);}
 .stat-val{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--white);display:block;}
-.overlay{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(6,6,15,.85);backdrop-filter:blur(4px);}
+ 
+/* OVERLAYS */
+.overlay{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(6,6,15,.88);backdrop-filter:blur(4px);}
 .overlay.show{display:flex;}
 .dominio-box{border:1px solid var(--gold);background:var(--panel);padding:2.5rem 3rem;text-align:center;max-width:420px;animation:domExpand .4s cubic-bezier(.17,.67,.35,1.3);}
 @keyframes domExpand{from{transform:scale(.6);opacity:0;}to{transform:scale(1);opacity:1;}}
@@ -194,17 +198,31 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .bf-sub{font-family:'Share Tech Mono',monospace;font-size:.85rem;letter-spacing:.3em;color:var(--white);margin-top:.5rem;text-transform:uppercase;}
 .bf-cd{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:var(--flash);margin-top:1rem;animation:pulse 1s ease infinite;}
 @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+/* Rueda overlay */
+.rueda-box{border:1px solid var(--curse);background:var(--panel);padding:2rem 2.5rem;text-align:center;max-width:400px;animation:domExpand .35s ease;}
+.rueda-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.1em;color:var(--curse);}
+.rueda-wheel{font-size:3rem;animation:spin 1s ease-out;display:inline-block;}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(720deg);}}
+.rueda-skill{font-family:'Crimson Pro',serif;font-size:1.1rem;font-weight:600;color:var(--gold2);margin:.5rem 0;}
+.rueda-progress{display:flex;gap:.4rem;justify-content:center;margin:.6rem 0;}
+.rueda-pip{width:16px;height:16px;border-radius:50%;border:2px solid var(--curse);background:transparent;}
+.rueda-pip.done{background:var(--curse);}
+/* Special poder overlays */
+.generic-box{border:1px solid var(--flash);background:var(--panel);padding:2rem 2.5rem;text-align:center;max-width:380px;animation:domExpand .35s ease;}
+.generic-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.1em;color:var(--flash);}
+.generic-body{font-family:'Crimson Pro',serif;font-size:1.1rem;color:var(--white);margin-top:.6rem;line-height:1.5;}
+ 
 .dmg-popup{position:fixed;font-family:'Bebas Neue',sans-serif;font-size:2.5rem;pointer-events:none;z-index:200;animation:dmgAnim .9s ease forwards;text-shadow:0 0 10px currentColor;}
 @keyframes dmgAnim{0%{transform:translateY(0) scale(.8);opacity:1;}100%{transform:translateY(-60px) scale(1.2);opacity:0;}}
 .toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--panel);border:1px solid var(--gold);font-family:'Share Tech Mono',monospace;font-size:.75rem;color:var(--gold);padding:.6rem 1.4rem;border-radius:3px;z-index:300;animation:toastIn .3s ease;pointer-events:none;}
 @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(10px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--border);}
-@media(max-width:600px){.battle-area{grid-template-columns:1fr;}.hp-bar-wrap{width:180px;}.pair-row{flex-direction:column;}.pair-arrow{display:none;}}
+@media(max-width:620px){.battle-area{grid-template-columns:1fr;}.hp-bar-wrap{width:180px;}.pair-row{flex-direction:column;}.pair-arrow{display:none;}}
 </style>
 </head>
 <body>
-
+ 
 <!-- AUTH -->
 <div id="screen-auth" class="screen active">
   <div class="setup-title">DUELO<br><span>DE PODERES</span></div>
@@ -218,7 +236,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <button class="btn-gold" onclick="entrar()">ENTRAR AL DOJO</button>
   </div>
 </div>
-
+ 
 <!-- LOBBY -->
 <div id="screen-lobby" class="screen">
   <div class="lobby-profile">
@@ -246,7 +264,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <button class="btn-dim" style="width:100%" onclick="cerrarSesion()">↩ CAMBIAR NOMBRE</button>
   </div>
 </div>
-
+ 
 <!-- QUEUE -->
 <div id="screen-queue" class="screen">
   <div class="queue-box">
@@ -257,7 +275,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <button class="btn-dim" onclick="cancelarBusqueda()">CANCELAR</button>
   </div>
 </div>
-
+ 
 <!-- SHOP -->
 <div id="screen-shop" class="screen">
   <div class="shop-header">
@@ -275,7 +293,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   </div>
   <div class="shop-grid" id="shop-grid"></div>
 </div>
-
+ 
 <!-- GAME -->
 <div id="screen-game" class="screen">
   <div class="arena-top">
@@ -331,7 +349,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   </div>
   <div class="battle-log" id="battle-log"></div>
 </div>
-
+ 
 <!-- END -->
 <div id="screen-end" class="screen">
   <div class="end-title" id="end-title">VICTORIA</div>
@@ -340,7 +358,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <div class="end-stats" id="end-stats"></div>
   <button class="btn-gold" style="margin-top:1rem" onclick="irLobby()">VOLVER AL DOJO</button>
 </div>
-
+ 
 <!-- OVERLAYS -->
 <div class="overlay" id="overlay-dominio">
   <div class="dominio-box">
@@ -385,12 +403,27 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="bf-cd" id="bf-cd">3</div>
   </div>
 </div>
-
+<div class="overlay" id="overlay-rueda">
+  <div class="rueda-box">
+    <div class="rueda-title">🎡 RUEDA DEL JUICIO</div>
+    <div class="rueda-wheel" id="rueda-wheel">⚙</div>
+    <div class="rueda-skill" id="rueda-skill">—</div>
+    <div class="rueda-progress" id="rueda-progress"></div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:.65rem;color:var(--dim);margin-top:.4rem;" id="rueda-hint"></div>
+  </div>
+</div>
+<div class="overlay" id="overlay-generic">
+  <div class="generic-box">
+    <div class="generic-title" id="generic-title">PODER ACTIVADO</div>
+    <div class="generic-body" id="generic-body">—</div>
+  </div>
+</div>
+ 
 <script type="module">
-import { initializeApp }       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp }  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getDatabase, ref, set, get, onValue, update, remove, push, off }
   from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-
+ 
 const FB = initializeApp({
   apiKey:"AIzaSyDq2ZP3mgV5crRpNt4QQbLGpzFAMqGeXvk",
   authDomain:"duelo-86389.firebaseapp.com",
@@ -401,532 +434,502 @@ const FB = initializeApp({
   databaseURL:"https://duelo-86389-default-rtdb.firebaseio.com"
 });
 const db = getDatabase(FB);
-
-// ── CONSTANTS ──
+ 
+// ══ CONSTANTS ══
 const MAX_HP=100, MAX_E=5, XP_PER_LEVEL=200;
-const ATAQUES=[{n:'Golpe',min:15,max:25,costo:1},{n:'Técnica',min:25,max:40,costo:2},{n:'Carga',min:40,max:60,costo:3}];
-const PARES=[
-  {sac:{id:'s1',label:'−20 HP si descansas o fallas'},rec:{id:'r1',label:'+50% daño (3 ataques)',mult:1.5,uses:3}},
-  {sac:{id:'s2',label:'−40 HP si descansas o fallas'},rec:{id:'r2',label:'+100% daño (2 ataques)',mult:2.0,uses:2}},
-  {sac:{id:'s3',label:'Energía a 0 si descansas o fallas'},rec:{id:'r3',label:'+30 HP al instante',heal:30}},
+const ATAQUES=[
+  {n:'Golpe',min:15,max:25,costo:1},
+  {n:'Técnica',min:25,max:40,costo:2},
+  {n:'Carga',min:40,max:60,costo:3}
 ];
+const PARES=[
+  {sac:{id:'s1',label:'−20 HP si descansas o fallas'},   rec:{id:'r1',label:'+50% daño (3 ataques)',mult:1.5,uses:3}},
+  {sac:{id:'s2',label:'−40 HP si descansas o fallas'},   rec:{id:'r2',label:'+100% daño (2 ataques)',mult:2.0,uses:2}},
+  {sac:{id:'s3',label:'Energía a 0 si descansas/fallas'},rec:{id:'r3',label:'+30 HP al instante',heal:30}},
+  // Intercambio Forzado is par index 3
+  {sac:{id:'s4',label:'−35 HP si descansas o fallas'},   rec:{id:'r4',label:'Intercambias HP con el rival',swap:true}},
+];
+const RUEDA_SKILLS=[
+  {id:'corte_eclipse',name:'Corte de Eclipse',desc:'Ignora defensa parcial, +100% daño a rivales con HP < 50%'},
+  {id:'paradoja_temporal',name:'Paradoja Temporal',desc:'Repite el último ataque con 60% de efectividad'},
+  {id:'tecnica_invertida',name:'Técnica Invertida',desc:'Convierte el próximo daño recibido en curación (1 turno)'},
+];
+ 
+// ── SHOP CATALOG ──
 const SHOP_PODERES=[
-  {id:'eco_maldito',name:'Eco Maldito',icon:'👁',desc:'Actívalo para que tu próximo ataque haga daño máximo garantizado.',price:80,tag:'poder'},
-  {id:'escudo_cursed',name:'Escudo Cursed',icon:'🛡',desc:'Al inicio del duelo tienes un escudo que absorbe 25 de daño del primer hit recibido.',price:60,tag:'poder'},
-  {id:'doble_bruja',name:'Bruja Doble',icon:'⚗',desc:'Tu Factor Bruja tiene 2 cargas en lugar de 1.',price:100,tag:'poder'},
-  {id:'vampirismo',name:'Vampirismo',icon:'🩸',desc:'Cada vez que atacas, recuperas 8 HP.',price:120,tag:'poder'},
-  {id:'carga_critica',name:'Carga Crítica',icon:'⚡',desc:'Tu ataque Carga tiene 35% de probabilidad de hacer daño doble.',price:90,tag:'poder'},
+  // Original 5
+  {id:'eco_maldito',     name:'Eco Maldito',        icon:'👁', desc:'Tu próximo ataque hace daño máximo garantizado.',                                           price:80,  tag:'poder'},
+  {id:'escudo_cursed',   name:'Escudo Cursed',       icon:'🛡', desc:'Absorbe 25 de daño del primer hit que recibas.',                                           price:60,  tag:'poder'},
+  {id:'doble_bruja',     name:'Bruja Doble',         icon:'⚗', desc:'Tu Factor Bruja tiene 2 cargas en lugar de 1.',                                            price:100, tag:'poder'},
+  {id:'vampirismo',      name:'Vampirismo',          icon:'🩸', desc:'Cada vez que atacas recuperas 8 HP.',                                                      price:120, tag:'poder'},
+  {id:'carga_critica',   name:'Carga Crítica',       icon:'⚡', desc:'Tu ataque Carga tiene 35% de chance de hacer daño doble.',                                 price:90,  tag:'poder'},
+  // 6 new powers
+  {id:'corte_eclipse',   name:'Corte de Eclipse',    icon:'🌘', desc:'Actívalo: ignora defensa parcial y hace daño doble si el rival tiene menos de 50% HP.',   price:130, tag:'poder'},
+  {id:'paradoja_temporal',name:'Paradoja Temporal',  icon:'⏳', desc:'Repite automáticamente tu último ataque con 60% de efectividad (costo 2⚡).',              price:110, tag:'poder'},
+  {id:'intercambio_forzado',name:'Intercambio Forzado',icon:'🔀',desc:'Contrato especial: logra 3 ataques seguidos e intercambias tu HP actual con el del rival.',price:160, tag:'poder'},
+  {id:'tecnica_invertida',name:'Técnica Invertida',  icon:'💠', desc:'Durante 1 turno, el daño que recibes se convierte en curación.',                          price:140, tag:'poder'},
+  {id:'ruptura_dominio', name:'Ruptura de Dominio',  icon:'💥', desc:'Cancela instantáneamente el dominio activo del rival.',                                   price:120, tag:'poder'},
+  {id:'rueda_juicio',    name:'Rueda del Juicio',    icon:'🎡', desc:'Tras 3 turnos consecutivos la rueda gira y otorga una habilidad aleatoria poderosa.',     price:180, tag:'poder'},
 ];
 const SHOP_SKINS=[
-  {id:'skin_dom_rojo',name:'Dominio Carmesí',icon:'🔴',desc:'La expansión de dominio aparece roja y con un nombre alternativo épico.',price:50,tag:'skin'},
-  {id:'skin_dom_void',name:'Dominio Void',icon:'🌑',desc:'Fondo negro absoluto al expandir el dominio. Visual minimalista.',price:50,tag:'skin'},
-  {id:'skin_flash_oro',name:'Black Flash Dorado',icon:'✨',desc:'El Black Flash brilla en dorado en lugar de cyan.',price:40,tag:'skin'},
-  {id:'skin_pips_fuego',name:'Energía de Fuego',icon:'🔥',desc:'Los pips de energía se muestran parpadeando como llamas.',price:35,tag:'skin'},
+  {id:'skin_dom_rojo',  name:'Dominio Carmesí', icon:'🔴', desc:'La expansión de dominio aparece roja sangre.',       price:50, tag:'skin'},
+  {id:'skin_dom_void',  name:'Dominio Void',    icon:'🌑', desc:'Fondo negro absoluto al expandir el dominio.',        price:50, tag:'skin'},
+  {id:'skin_flash_oro', name:'Black Flash Dorado',icon:'✨',desc:'El Black Flash brilla en dorado.',                   price:40, tag:'skin'},
+  {id:'skin_pips_fuego',name:'Energía de Fuego',icon:'🔥', desc:'Los pips de energía parpadean como llamas.',         price:35, tag:'skin'},
 ];
-
-// ── PROFILE ──
-let ME={uid:'',name:'',dom:'',xp:0,coins:150,inventory:[]};
+ 
+// ══ PROFILE ══
+let ME={uid:'',name:'',dom:'',xp:0,coins:200,inventory:[]};
 const getLevel=xp=>Math.floor(xp/XP_PER_LEVEL)+1;
 const getXpInLevel=xp=>xp%XP_PER_LEVEL;
-const saveME=()=>localStorage.setItem('duelo_v2',JSON.stringify(ME));
-const loadME=()=>{ const r=localStorage.getItem('duelo_v2'); if(r) Object.assign(ME,JSON.parse(r)); return !!ME.uid; };
+const saveME=()=>localStorage.setItem('duelo_v3',JSON.stringify(ME));
+const loadME=()=>{ const r=localStorage.getItem('duelo_v3'); if(r) Object.assign(ME,JSON.parse(r)); return !!ME.uid; };
 const genUid=()=>Math.random().toString(36).slice(2,10)+Math.random().toString(36).slice(2,10);
-
-// ── UTILS ──
+const has=id=>ME.inventory.includes(id);
+ 
+// ══ UTILS ══
 const rng=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
 const sw=id=>{ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); document.getElementById(id).classList.add('active'); };
 const abrirOverlay=id=>document.getElementById(id).classList.add('show');
 window.cerrarOverlay=id=>document.getElementById(id).classList.remove('show');
 const toast=(msg,dur=2400)=>{ const t=document.createElement('div'); t.className='toast'; t.textContent=msg; document.body.appendChild(t); setTimeout(()=>t.remove(),dur); };
 function log(msg,tipo){ const el=document.getElementById('battle-log'); const d=document.createElement('div'); d.className='log-entry'+(tipo?' '+tipo:''); d.textContent=`› ${msg}`; el.appendChild(d); el.scrollTop=el.scrollHeight; }
-function dmgPopup(dmg,targetSlot){
-  const popup=document.createElement('div'); popup.className='dmg-popup'; popup.textContent=`-${dmg}`;
-  popup.style.color=targetSlot==='p1'?'var(--p2)':'var(--p1)';
-  const pIdx=targetSlot==='p1'?1:2;
-  const rect=document.getElementById(`panel-p${pIdx}`).getBoundingClientRect();
-  popup.style.left=(rect.left+rect.width/2-30)+'px'; popup.style.top=(rect.top+40)+'px';
-  document.body.appendChild(popup); setTimeout(()=>popup.remove(),900);
-}
-
-// ── MATCHMAKING STATE ──
-let roomId=null, mySlot=null, roomRef=null, roomUnsub=null;
+function dmgPopup(dmg,targetSlot){ const popup=document.createElement('div'); popup.className='dmg-popup'; popup.textContent=`-${dmg}`; popup.style.color=targetSlot==='p1'?'var(--p2)':'var(--p1)'; const pIdx=targetSlot==='p1'?1:2; const rect=document.getElementById(`panel-p${pIdx}`).getBoundingClientRect(); popup.style.left=(rect.left+rect.width/2-30)+'px'; popup.style.top=(rect.top+40)+'px'; document.body.appendChild(popup); setTimeout(()=>popup.remove(),900); }
+ 
+// ══ ROOM STATE ══
+let roomId=null, mySlot=null, roomRef=null, roomListening=false;
 let queueRef=null, queueTimer=null, queueSecs=0;
 let G={}, lastLogLen=0, pendPairIdx=null, currentShopTab='poderes';
-
-// ── AUTH ──
-window.entrar=function(){
-  const n=document.getElementById('auth-name').value.trim().toUpperCase();
-  const d=document.getElementById('auth-dominio').value.trim();
-  if(!n){ document.getElementById('auth-err').style.display='block'; return; }
-  document.getElementById('auth-err').style.display='none';
-  if(!ME.uid) ME.uid=genUid();
-  ME.name=n; ME.dom=d||'Dominio Sin Nombre';
-  saveME(); irLobby();
-};
+// Track which overlays we already showed this sync cycle
+let shownOverlays=new Set();
+ 
+// ══ AUTH ══
+window.entrar=function(){ const n=document.getElementById('auth-name').value.trim().toUpperCase(); const d=document.getElementById('auth-dominio').value.trim(); if(!n){document.getElementById('auth-err').style.display='block';return;} document.getElementById('auth-err').style.display='none'; if(!ME.uid)ME.uid=genUid(); ME.name=n; ME.dom=d||'Dominio Sin Nombre'; saveME(); irLobby(); };
 window.cerrarSesion=function(){ sw('screen-auth'); };
-
-// ── LOBBY ──
+ 
+// ══ LOBBY ══
 window.irLobby=function(){ limpiarRoom(); sw('screen-lobby'); renderLobby(); };
-function renderLobby(){
-  document.getElementById('lobby-name').textContent=ME.name;
-  document.getElementById('lobby-avatar').textContent=ME.name[0];
-  const lv=getLevel(ME.xp), xi=getXpInLevel(ME.xp);
-  document.getElementById('lobby-level').textContent=`LVL ${lv}`;
-  document.getElementById('lobby-xp').textContent=`${ME.xp} XP`;
-  document.getElementById('lobby-coins').textContent=`⬡ ${ME.coins}`;
-  document.getElementById('lobby-xp-bar').style.width=`${(xi/XP_PER_LEVEL)*100}%`;
-}
-
-// ── SHOP ──
+function renderLobby(){ document.getElementById('lobby-name').textContent=ME.name; document.getElementById('lobby-avatar').textContent=ME.name[0]; const lv=getLevel(ME.xp),xi=getXpInLevel(ME.xp); document.getElementById('lobby-level').textContent=`LVL ${lv}`; document.getElementById('lobby-xp').textContent=`${ME.xp} XP`; document.getElementById('lobby-coins').textContent=`⬡ ${ME.coins}`; document.getElementById('lobby-xp-bar').style.width=`${(xi/XP_PER_LEVEL)*100}%`; }
+ 
+// ══ SHOP ══
 window.irTienda=function(){ sw('screen-shop'); document.getElementById('shop-coins').textContent=ME.coins; renderShop(); };
 window.shopTab=function(tab){ currentShopTab=tab; document.getElementById('tab-poderes').classList.toggle('active',tab==='poderes'); document.getElementById('tab-skins').classList.toggle('active',tab==='skins'); renderShop(); };
-function renderShop(){
-  const grid=document.getElementById('shop-grid'); grid.innerHTML='';
-  (currentShopTab==='poderes'?SHOP_PODERES:SHOP_SKINS).forEach(item=>{
-    const owned=ME.inventory.includes(item.id);
-    const card=document.createElement('div'); card.className='shop-card'+(owned?' owned':'');
-    card.innerHTML=`<div class="shop-icon">${item.icon}</div><div><div class="shop-name">${item.name}</div><span class="shop-tag ${item.tag}">${item.tag==='poder'?'Poder especial':'Skin'}</span></div><div class="shop-desc">${item.desc}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;"><div class="shop-price">⬡ ${item.price}</div><button class="btn-buy" ${owned||ME.coins<item.price?'disabled':''} onclick="comprar('${item.id}')">${owned?'OBTENIDO':'COMPRAR'}</button></div>`;
-    grid.appendChild(card);
-  });
-}
-window.comprar=function(id){
-  const all=[...SHOP_PODERES,...SHOP_SKINS], item=all.find(i=>i.id===id);
-  if(!item||ME.inventory.includes(id)||ME.coins<item.price) return;
-  ME.coins-=item.price; ME.inventory.push(id); saveME();
-  document.getElementById('shop-coins').textContent=ME.coins;
-  toast(`✦ ${item.name} obtenido!`); renderShop(); renderLobby();
-};
-
-// ── MATCHMAKING ──
-window.buscarPartida=async function(){
-  sw('screen-queue');
-  document.getElementById('queue-status').innerHTML='Buscando rival <span class="queue-pulse"></span>';
-  document.getElementById('queue-code').style.display='none';
-  document.getElementById('queue-code-hint').style.display='none';
-  startQueueTimer();
-  try {
-    const snap=await get(ref(db,'queue'));
-    let joined=false;
-    if(snap.exists()){
-      const entries=Object.entries(snap.val());
-      for(const [key,entry] of entries){
-        if(entry.uid!==ME.uid){
-          await remove(ref(db,`queue/${key}`));
-          await joinRoom(entry.roomId,'p2');
-          joined=true; break;
-        }
-      }
-    }
-    if(!joined){
-      const rid=await createRoom('p1');
-      queueRef=push(ref(db,'queue'),{uid:ME.uid,roomId:rid,ts:Date.now()});
-      waitForOpponent(rid);
-    }
-  } catch(e){ toast('Error de conexión: '+e.message); irLobby(); }
-};
-
-window.crearSala=async function(){
-  sw('screen-queue'); startQueueTimer();
-  try {
-    const rid=await createRoom('p1');
-    const code=rid.slice(-6).toUpperCase();
-    document.getElementById('queue-status').innerHTML='Sala creada — esperando <span class="queue-pulse"></span>';
-    document.getElementById('queue-code').textContent=code;
-    document.getElementById('queue-code').style.display='block';
-    document.getElementById('queue-code-hint').style.display='block';
-    waitForOpponent(rid);
-  } catch(e){ toast('Error: '+e.message); irLobby(); }
-};
-
-window.unirseConCodigo=async function(){
-  const raw=document.getElementById('join-code').value.trim().toUpperCase();
-  if(raw.length<4){ toast('Código inválido'); return; }
-  try {
-    const snap=await get(ref(db,'rooms'));
-    if(!snap.exists()){ toast('Sala no encontrada'); return; }
-    const entry=Object.entries(snap.val()).find(([k])=>k.slice(-6).toUpperCase()===raw);
-    if(!entry){ toast('Sala no encontrada'); return; }
-    const [rid,rdata]=entry;
-    if(rdata.p2&&rdata.p2.uid){ toast('Sala llena'); return; }
-    sw('screen-queue'); startQueueTimer();
-    await joinRoom(rid,'p2');
-  } catch(e){ toast('Error: '+e.message); }
-};
-
-window.cancelarBusqueda=async function(){
-  stopQueueTimer();
-  if(queueRef) await remove(await queueRef);
-  if(roomId) await remove(ref(db,`rooms/${roomId}`));
-  limpiarRoom(); irLobby();
-};
-
-async function createRoom(slot){
-  const rid=genUid(); roomId=rid; mySlot=slot;
-  const ps=mkPlayerState();
-  await set(ref(db,`rooms/${rid}`),{
-    p1:{uid:ME.uid,name:ME.name,dom:ME.dom,...ps},
-    p2:null, turn:'p1', log:[], status:'waiting', bf:false,
-    pending:null, created:Date.now()
-  });
-  return rid;
-}
-
-async function joinRoom(rid,slot){
-  roomId=rid; mySlot=slot;
-  const ps=mkPlayerState();
-  await update(ref(db,`rooms/${rid}`),{
-    [`${slot}`]:{uid:ME.uid,name:ME.name,dom:ME.dom,...ps},
-    status:'ready'
-  });
-  listenRoom(rid);
-}
-
-function waitForOpponent(rid){
-  const r=ref(db,`rooms/${rid}/status`);
-  const unsub=onValue(r,snap=>{
-    if(snap.val()==='ready'){ off(r); stopQueueTimer(); listenRoom(rid); }
-  });
-}
-
+function renderShop(){ const grid=document.getElementById('shop-grid'); grid.innerHTML=''; (currentShopTab==='poderes'?SHOP_PODERES:SHOP_SKINS).forEach(item=>{ const owned=has(item.id); const card=document.createElement('div'); card.className='shop-card'+(owned?' owned':''); card.innerHTML=`<div class="shop-icon">${item.icon}</div><div><div class="shop-name">${item.name}</div><span class="shop-tag ${item.tag}">${item.tag==='poder'?'Poder especial':'Skin'}</span></div><div class="shop-desc">${item.desc}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;"><div class="shop-price">⬡ ${item.price}</div><button class="btn-buy" ${owned||ME.coins<item.price?'disabled':''} onclick="comprar('${item.id}')">${owned?'OBTENIDO':'COMPRAR'}</button></div>`; grid.appendChild(card); }); }
+window.comprar=function(id){ const all=[...SHOP_PODERES,...SHOP_SKINS],item=all.find(i=>i.id===id); if(!item||has(id)||ME.coins<item.price)return; ME.coins-=item.price; ME.inventory.push(id); saveME(); document.getElementById('shop-coins').textContent=ME.coins; toast(`✦ ${item.name} obtenido!`); renderShop(); renderLobby(); };
+ 
+// ══ MATCHMAKING ══
+window.buscarPartida=async function(){ sw('screen-queue'); document.getElementById('queue-status').innerHTML='Buscando rival <span class="queue-pulse"></span>'; document.getElementById('queue-code').style.display='none'; document.getElementById('queue-code-hint').style.display='none'; startQueueTimer(); try{ const snap=await get(ref(db,'queue')); let joined=false; if(snap.exists()){ const entries=Object.entries(snap.val()); for(const [key,entry] of entries){ if(entry.uid!==ME.uid){ await remove(ref(db,`queue/${key}`)); await joinRoom(entry.roomId,'p2'); joined=true; break; } } } if(!joined){ const rid=await createRoom('p1'); queueRef=push(ref(db,'queue'),{uid:ME.uid,roomId:rid,ts:Date.now()}); waitForOpponent(rid); } }catch(e){ toast('Error: '+e.message); irLobby(); } };
+window.crearSala=async function(){ sw('screen-queue'); startQueueTimer(); try{ const rid=await createRoom('p1'); const code=rid.slice(-6).toUpperCase(); document.getElementById('queue-status').innerHTML='Sala creada — esperando <span class="queue-pulse"></span>'; document.getElementById('queue-code').textContent=code; document.getElementById('queue-code').style.display='block'; document.getElementById('queue-code-hint').style.display='block'; waitForOpponent(rid); }catch(e){ toast('Error: '+e.message); irLobby(); } };
+window.unirseConCodigo=async function(){ const raw=document.getElementById('join-code').value.trim().toUpperCase(); if(raw.length<4){toast('Código inválido');return;} try{ const snap=await get(ref(db,'rooms')); if(!snap.exists()){toast('Sala no encontrada');return;} const entry=Object.entries(snap.val()).find(([k])=>k.slice(-6).toUpperCase()===raw); if(!entry){toast('Sala no encontrada');return;} const [rid,rdata]=entry; if(rdata.p2?.uid){toast('Sala llena');return;} sw('screen-queue'); startQueueTimer(); await joinRoom(rid,'p2'); }catch(e){ toast('Error: '+e.message); } };
+window.cancelarBusqueda=async function(){ stopQueueTimer(); try{ if(queueRef)await remove(await queueRef); if(roomId)await remove(ref(db,`rooms/${roomId}`)); }catch(e){} limpiarRoom(); irLobby(); };
+ 
+async function createRoom(slot){ const rid=genUid(); roomId=rid; mySlot=slot; const ps=mkPlayerState(); await set(ref(db,`rooms/${rid}`),{p1:{uid:ME.uid,name:ME.name,dom:ME.dom,...ps},p2:null,turn:'p1',log:[],status:'waiting',events:[],created:Date.now()}); return rid; }
+async function joinRoom(rid,slot){ roomId=rid; mySlot=slot; const ps=mkPlayerState(); await update(ref(db,`rooms/${rid}`),{[`${slot}`]:{uid:ME.uid,name:ME.name,dom:ME.dom,...ps},status:'ready'}); listenRoom(rid); }
+function waitForOpponent(rid){ const r=ref(db,`rooms/${rid}/status`); const unsub=onValue(r,snap=>{ if(snap.val()==='ready'){off(r);stopQueueTimer();listenRoom(rid);} }); }
+ 
 function listenRoom(rid){
-  if(roomUnsub){ off(roomRef); }
+  if(roomListening){ off(roomRef); }
   roomRef=ref(db,`rooms/${rid}`);
+  roomListening=true;
   onValue(roomRef,snap=>{
     if(!snap.exists()) return;
     const data=snap.val();
-    const isGameScreen=document.getElementById('screen-game').classList.contains('active');
-    if((data.status==='ready'||data.status==='playing')&&!isGameScreen&&data.p1&&data.p2){
-      // Mark as playing
+    const isGame=document.getElementById('screen-game').classList.contains('active');
+    if((data.status==='ready'||data.status==='playing')&&!isGame&&data.p1&&data.p2){
       if(data.status==='ready') update(ref(db,`rooms/${rid}`),{status:'playing'});
       iniciarJuego(data);
-    } else if(data.status==='playing'&&isGameScreen){
+    } else if(data.status==='playing'&&isGame){
       syncEstado(data);
     } else if(data.status==='finished'){
-      off(roomRef);
+      off(roomRef); roomListening=false;
       mostrarFin(data);
     }
   });
-  roomUnsub=true;
 }
-
-function limpiarRoom(){
-  if(roomUnsub&&roomRef){ off(roomRef); roomUnsub=false; }
-  roomId=null; mySlot=null; roomRef=null;
-  lastLogLen=0; G={};
-  stopQueueTimer();
-}
-
-function startQueueTimer(){
-  queueSecs=0; stopQueueTimer();
-  queueTimer=setInterval(()=>{ queueSecs++; const m=Math.floor(queueSecs/60),s=queueSecs%60; document.getElementById('queue-timer').textContent=`${m}:${s.toString().padStart(2,'0')}`; },1000);
-}
-function stopQueueTimer(){ if(queueTimer){ clearInterval(queueTimer); queueTimer=null; } }
-
-// ── PLAYER STATE ──
+ 
+function limpiarRoom(){ if(roomListening&&roomRef){off(roomRef);roomListening=false;} roomId=null;mySlot=null;roomRef=null;lastLogLen=0;G={};shownOverlays=new Set();stopQueueTimer(); }
+function startQueueTimer(){ queueSecs=0;stopQueueTimer(); queueTimer=setInterval(()=>{queueSecs++;const m=Math.floor(queueSecs/60),s=queueSecs%60;document.getElementById('queue-timer').textContent=`${m}:${s.toString().padStart(2,'0')}`;},1000); }
+function stopQueueTimer(){ if(queueTimer){clearInterval(queueTimer);queueTimer=null;} }
+ 
+// ══ PLAYER STATE ══
 function mkPlayerState(){
   return {
     hp:MAX_HP, maxHp:MAX_HP, energy:3,
-    bruja:{cargas:ME.inventory.includes('doble_bruja')?2:1,activo:false,efecto:null},
-    dominio:{cargas:1,activo:false,left:0},
-    contrato:{cargas:1,activo:false,pairIdx:null,hits:0,need:3,ok:false,fail:false,recUses:0},
-    shield:ME.inventory.includes('escudo_cursed')?25:0,
-    lifesteal:ME.inventory.includes('vampirismo'),
-    critCarga:ME.inventory.includes('carga_critica'),
-    ecoActivo:false,
+    bruja:{cargas:has('doble_bruja')?2:1, activo:false, efecto:null},
+    dominio:{cargas:1, activo:false, left:0},
+    contrato:{cargas:1, activo:false, pairIdx:null, hits:0, need:3, ok:false, fail:false, recUses:0},
+    shield: has('escudo_cursed')?25:0,
+    lifesteal: has('vampirismo'),
+    critCarga: has('carga_critica'),
+    ecoActivo: false,
+    lastAtk: null,            // for paradoja_temporal
+    tecnicaInv: false,        // absorb next damage as heal
+    ruedaGiros: 0,            // turns for rueda_juicio
+    ruedaSkill: null,         // active skill from rueda
+    ruedaInmune: null,        // immune to this power id
+    // New powers — just track if owned via ME.inventory
   };
 }
-
-// ── GAME INIT ──
-function iniciarJuego(data){
-  G=JSON.parse(JSON.stringify(data));
-  lastLogLen=(data.log||[]).length;
-  document.getElementById('battle-log').innerHTML='';
-  sw('screen-game');
-  renderAll();
-  log(`⚔ ${G.p1.name} vs ${G.p2.name} — ¡Que comience el duelo!`,'important');
-}
-
+ 
+// ══ GAME INIT ══
+function iniciarJuego(data){ G=JSON.parse(JSON.stringify(data)); lastLogLen=(data.log||[]).length; document.getElementById('battle-log').innerHTML=''; sw('screen-game'); renderAll(); log(`⚔ ${G.p1.name} vs ${G.p2.name} — ¡Que comience el duelo!`,'important'); }
 const myP=()=>G[mySlot];
 const rivSlot=()=>mySlot==='p1'?'p2':'p1';
 const rivP=()=>G[rivSlot()];
 const isMyTurn=()=>G.turn===mySlot;
-
-// ── RENDER ──
+ 
+// ══ RENDER ══
 function renderAll(){ renderHUD(); renderTurn(); renderPanels(); }
-function renderHUD(){
-  ['p1','p2'].forEach((sl,i)=>{
-    const p=G[sl]; if(!p) return;
-    const pct=Math.max(0,p.hp/p.maxHp*100);
-    document.getElementById(`p${i+1}-hp-bar`).style.width=pct+'%';
-    document.getElementById(`p${i+1}-hp-text`).textContent=`${Math.max(0,p.hp)} / ${p.maxHp}`;
-    document.getElementById(`p${i+1}-display-name`).textContent=p.name;
-  });
-}
-function renderTurn(){
-  const b=document.getElementById('turn-banner');
-  b.textContent=`TURNO DE ${G[G.turn]?.name||''}`;
-  b.className=`turn-banner ${G.turn==='p1'?'p1-turn':'p2-turn'}`;
-  document.getElementById('waiting-rival').style.display=isMyTurn()?'none':'block';
-}
+function renderHUD(){ ['p1','p2'].forEach((sl,i)=>{ const p=G[sl]; if(!p)return; document.getElementById(`p${i+1}-hp-bar`).style.width=`${Math.max(0,p.hp/p.maxHp*100)}%`; document.getElementById(`p${i+1}-hp-text`).textContent=`${Math.max(0,p.hp)} / ${p.maxHp}`; document.getElementById(`p${i+1}-display-name`).textContent=p.name; }); }
+function renderTurn(){ const b=document.getElementById('turn-banner'); b.textContent=`TURNO DE ${G[G.turn]?.name||''}`; b.className=`turn-banner ${G.turn==='p1'?'p1-turn':'p2-turn'}`; document.getElementById('waiting-rival').style.display=isMyTurn()?'none':'block'; }
 function renderPanels(){
   const myI=mySlot==='p1'?1:2, rivI=mySlot==='p1'?2:1;
-  const me=myP(), riv=rivP(); if(!me||!riv) return;
+  const me=myP(), riv=rivP(); if(!me||!riv)return;
   document.getElementById(`panel-p${myI}`).classList.toggle('active-panel',isMyTurn());
   document.getElementById(`panel-p${rivI}`).classList.remove('active-panel');
   document.getElementById(`p${myI}-panel-title`).textContent=isMyTurn()?'⚔ Turno activo':'⏳ Tu turno pronto';
   document.getElementById(`p${rivI}-panel-title`).textContent='👁 Rival';
   renderPips(`p${myI}-pips`,me.energy); document.getElementById(`p${myI}-energy-text`).textContent=`${me.energy}/${MAX_E}`;
   renderPips(`p${rivI}-pips`,riv.energy); document.getElementById(`p${rivI}-energy-text`).textContent=`${riv.energy}/${MAX_E}`;
-  const myAtks=document.getElementById(`p${myI}-attacks`).querySelectorAll('.atk-btn');
-  myAtks.forEach((btn,ai)=>btn.disabled=!isMyTurn()||(ai<3&&me.energy<ATAQUES[ai].costo));
+  document.getElementById(`p${myI}-attacks`).querySelectorAll('.atk-btn').forEach((btn,ai)=>btn.disabled=!isMyTurn()||(ai<3&&me.energy<ATAQUES[ai].costo));
   document.getElementById(`p${rivI}-attacks`).querySelectorAll('.atk-btn').forEach(b=>b.disabled=true);
   renderPoderes(myI,me,true); renderPoderes(rivI,riv,false);
 }
-function renderPips(elId,energy){ const el=document.getElementById(elId); el.innerHTML=''; for(let j=0;j<MAX_E;j++){ const p=document.createElement('div'); p.className='pip'+(j<energy?' full':''); el.appendChild(p); } }
+function renderPips(elId,energy){ const el=document.getElementById(elId); el.innerHTML=''; for(let j=0;j<MAX_E;j++){const p=document.createElement('div');p.className='pip'+(j<energy?' full':'');el.appendChild(p);} }
+ 
 function renderPoderes(pi,p,canAct){
   const el=document.getElementById(`p${pi}-poderes`); el.innerHTML='';
-  // Bruja
+ 
+  // ── Bruja ──
   const b=p.bruja||{cargas:0,activo:false};
-  const bb=mkBtn('⚗','bruja','Factor Bruja','Efecto aleatorio este turno',b.cargas>0?`${b.cargas} carga${b.cargas>1?'s':''}`:b.activo?'ACTIVO':'0 cargas',!canAct||b.cargas<=0,()=>doAccion({type:'bruja'}));
+  const bb=mkBtn('⚗','bruja','Factor Bruja','Efecto aleatorio este turno',
+    b.cargas>0?`${b.cargas} carga${b.cargas>1?'s':''}`:b.activo?'ACTIVO':'0 cargas',
+    !canAct||b.cargas<=0, ()=>doAccion({type:'bruja'}));
   if(b.activo) bb.style.borderColor='var(--curse)';
   el.appendChild(bb);
-  // Dominio
+ 
+  // ── Dominio ──
   const d=p.dominio||{cargas:0,activo:false,left:0};
-  const dd=mkBtn('🔥','dominio','Expansión de Dominio',d.activo?`Activo — ${d.left} turnos`:'+80% daño · −30% HP · 3 turnos',d.activo?'ACTIVO':(d.cargas>0?`${d.cargas} carga`:'0 cargas'),!canAct||d.cargas<=0||d.activo,()=>doAccion({type:'dominio'}));
+  const dd=mkBtn('🔥','dominio','Expansión de Dominio',
+    d.activo?`Activo — ${d.left} turno${d.left!==1?'s':''}`:'+80% daño · −30% HP rival · 3 turnos',
+    d.activo?'ACTIVO':(d.cargas>0?`${d.cargas} carga`:'0 cargas'),
+    !canAct||d.cargas<=0||d.activo, ()=>doAccion({type:'dominio'}));
   if(d.activo) dd.style.borderColor='var(--gold)';
   el.appendChild(dd);
-  // Contrato
+ 
+  // ── Contrato ──
   const c=p.contrato||{cargas:0,activo:false,ok:false,fail:false,hits:0,need:3};
   const cAct=c.activo&&!c.ok&&!c.fail;
   let cDesc='Apuesta sacrificio por recompensa';
   if(cAct) cDesc=`${c.hits}/${c.need} ataques`;
-  if(c.ok){ const par=PARES[c.pairIdx]; cDesc=par?.rec.mult?`✓ ×${par.rec.mult} (${c.recUses})` :'✓ HP curado'; }
+  if(c.ok){ const par=PARES[c.pairIdx]; cDesc=par?.rec.swap?'✓ Intercambio listo':par?.rec.mult?`✓ ×${par.rec.mult} (${c.recUses})`:'✓ HP curado'; }
   if(c.fail) cDesc='✗ Sacrificio aplicado';
-  const cb=mkBtn('📜','contrato','Contrato Vinculante',cDesc,cAct?'ACTIVO':c.ok?'✓':c.fail?'✗':(c.cargas>0?`${c.cargas} carga`:'0 cargas'),!canAct||(c.cargas<=0&&!cAct&&!c.ok),()=>cAct?verContrato(p):abrirContrato());
+  const cb=mkBtn('📜','contrato','Contrato Vinculante',cDesc,
+    cAct?'ACTIVO':c.ok?'✓':c.fail?'✗':(c.cargas>0?`${c.cargas} carga`:'0 cargas'),
+    !canAct||(c.cargas<=0&&!cAct&&!c.ok), ()=>cAct?verContrato(p):abrirContrato());
   if(cAct) cb.style.borderColor='var(--green)';
   el.appendChild(cb);
-  // Eco Maldito (purchased)
-  if(canAct&&ME.inventory.includes('eco_maldito')&&!p.ecoActivo){
-    el.appendChild(mkBtn('👁','especial','Eco Maldito','Próximo ataque = daño máximo','1 uso',!canAct,()=>doAccion({type:'eco'})));
+ 
+  // ── Purchased powers ──
+  if(canAct){
+    // Eco Maldito
+    if(has('eco_maldito')&&!p.ecoActivo) el.appendChild(mkBtn('👁','especial','Eco Maldito','Próximo ataque = daño máximo','1 uso',false,()=>doAccion({type:'eco'})));
+    if(p.ecoActivo) el.appendChild(mkBtn('👁','especial','Eco Maldito','Activo','ACTIVO',true,null));
+    // Corte de Eclipse
+    if(has('corte_eclipse')) el.appendChild(mkBtn('🌘','especial','Corte de Eclipse','×2 dmg si rival <50% HP, ignora defensa','1⚡',!canAct||p.energy<1,()=>doAccion({type:'corte_eclipse'})));
+    // Paradoja Temporal
+    if(has('paradoja_temporal')&&p.lastAtk!==null) el.appendChild(mkBtn('⏳','especial','Paradoja Temporal','Repite último ataque al 60%','2⚡',!canAct||p.energy<2,()=>doAccion({type:'paradoja_temporal'})));
+    // Intercambio Forzado — adds a 4th contrato pair, shown as separate button
+    if(has('intercambio_forzado')&&!c.activo&&!c.ok&&c.cargas>0) el.appendChild(mkBtn('🔀','contrato','Intercambio Forzado','Contrato: 3 ataques → intercambia HP','1 carga',false,()=>abrirContratoIntercambio()));
+    // Técnica Invertida
+    if(has('tecnica_invertida')&&!p.tecnicaInv) el.appendChild(mkBtn('💠','especial','Técnica Invertida','Próximo daño recibido = curación','1 turno',false,()=>doAccion({type:'tecnica_invertida'})));
+    if(p.tecnicaInv) el.appendChild(mkBtn('💠','especial','Técnica Invertida','Activa — absorbiendo daño','ACTIVO',true,null));
+    // Ruptura de Dominio
+    const rivDom=rivP()?.dominio;
+    if(has('ruptura_dominio')&&rivDom?.activo) el.appendChild(mkBtn('💥','especial','Ruptura de Dominio','Cancela el dominio rival activo','—',false,()=>doAccion({type:'ruptura_dominio'})));
+    // Rueda del Juicio
+    if(has('rueda_juicio')){ const giros=p.ruedaGiros||0; el.appendChild(mkBtn('🎡','rueda','Rueda del Juicio',p.ruedaSkill?`Skill activa: ${p.ruedaSkill}`:`${giros}/3 giros`,p.ruedaSkill?'ACTIVA':`${giros}/3`,true,null)); }
+  } else {
+    // Rival's passive displays
+    if(p.tecnicaInv) el.appendChild(mkBtn('💠','especial','Técnica Invertida','Activo — absorbiendo daño','ACTIVO',true,null));
+    if(p.ruedaSkill) el.appendChild(mkBtn('🎡','rueda','Rueda del Juicio',`Skill: ${p.ruedaSkill}`,'ACTIVA',true,null));
+    if((p.dominio||{}).activo) el.appendChild(mkBtn('🔥','dominio','Dominio Activo',`${p.dominio.left} turno${p.dominio.left!==1?'s':''} restante${p.dominio.left!==1?'s':''}`,'ACTIVO',true,null));
+    if((p.shield||0)>0) el.appendChild(mkBtn('🛡','especial','Escudo','Absorbe daño',`${p.shield} HP`,true,null));
   }
-  if(p.ecoActivo){ el.appendChild(mkBtn('👁','especial','Eco Maldito','Activo — próximo ataque máximo','ACTIVO',true,null)); }
-  // Shield display
-  if(p.shield>0) el.appendChild(mkBtn('🛡','especial','Escudo Cursed',`Absorbe ${p.shield} daño`,`${p.shield} HP`,true,null));
+  if((p.shield||0)>0&&canAct) el.appendChild(mkBtn('🛡','especial','Escudo Cursed',`Absorbe ${p.shield} daño`,`${p.shield} HP`,true,null));
 }
+ 
 function mkBtn(icon,cls,name,desc,charges,disabled,fn){
   const btn=document.createElement('button'); btn.className=`poder-btn ${cls}`; btn.disabled=disabled;
   btn.innerHTML=`<span class="poder-icon">${icon}</span><span class="poder-info"><span class="poder-name">${name}</span><span class="poder-desc">${desc}</span></span><span class="poder-charges">${charges}</span>`;
   if(fn) btn.onclick=fn; return btn;
 }
-
-// ── ACTIONS ──
-window.atacar=function(ai){ if(!isMyTurn()) return; const me=myP(); if(me.energy<ATAQUES[ai].costo) return; doAccion({type:'attack',ai}); };
-window.recuperar=function(){ if(!isMyTurn()) return; doAccion({type:'rest'}); };
-
-function doAccion(action){
-  if(!isMyTurn()||!roomId) return;
-  // Optimistically disable buttons
-  const mi=mySlot==='p1'?1:2;
-  document.getElementById(`p${mi}-attacks`).querySelectorAll('.atk-btn').forEach(b=>b.disabled=true);
-  document.getElementById(`p${mi}-poderes`).querySelectorAll('.poder-btn').forEach(b=>b.disabled=true);
-  procesarYPublicar(action);
-}
-
+ 
+// ══ ACTIONS ══
+window.atacar=function(ai){ if(!isMyTurn())return; const me=myP(); if(me.energy<ATAQUES[ai].costo)return; doAccion({type:'attack',ai}); };
+window.recuperar=function(){ if(!isMyTurn())return; doAccion({type:'rest'}); };
+function doAccion(action){ if(!isMyTurn()||!roomId)return; disableAllMyBtns(); procesarYPublicar(action); }
+function disableAllMyBtns(){ const mi=mySlot==='p1'?1:2; document.getElementById(`p${mi}-attacks`).querySelectorAll('.atk-btn').forEach(b=>b.disabled=true); document.getElementById(`p${mi}-poderes`).querySelectorAll('.poder-btn').forEach(b=>b.disabled=true); }
+ 
+// ══ GAME LOGIC ══
 function procesarYPublicar(action){
   const ns=JSON.parse(JSON.stringify(G));
   const myP2=ns[mySlot], rivP2=ns[rivSlot()];
-  const logEntries=[]; let changeTurn=true;
-
+  const logs=[]; let changeTurn=true;
+  // Generate a unique event key so both clients can detect new events
+  const evKey=Date.now()+'_'+Math.random().toString(36).slice(2,6);
+ 
   if(action.type==='attack'){
     const atk=ATAQUES[action.ai];
     myP2.energy-=atk.costo;
     let dmg=myP2.ecoActivo?atk.max:rng(atk.min,atk.max);
     myP2.ecoActivo=false;
+    myP2.lastAtk=action.ai;
     const extras=[];
+ 
     // Bruja
     if(myP2.bruja?.activo&&myP2.bruja?.efecto){ const ef=myP2.bruja.efecto; if(ef.mult&&ef.mult!==1){dmg=Math.round(dmg*ef.mult);extras.push(ef.desc);} myP2.bruja.activo=false; myP2.bruja.efecto=null; }
     // Dominio
-    if(myP2.dominio?.activo){ dmg=Math.round(dmg*1.8); extras.push('+80% Dom'); myP2.dominio.left--; if(myP2.dominio.left<=0){myP2.dominio.activo=false; logEntries.push({msg:`🔥 Dominio de ${myP2.name} expiró`,tipo:'gold'});} }
-    // Black Flash
-    if(ns.bf){ dmg=Math.round(dmg*2.5); extras.push('⚡ BLACK FLASH ×2.5'); ns.bf=false; }
-    // Contrato
+    if(myP2.dominio?.activo){ dmg=Math.round(dmg*1.8);extras.push('+80% Dom'); myP2.dominio.left--; if(myP2.dominio.left<=0){myP2.dominio.activo=false;logs.push({msg:`🔥 Dominio de ${myP2.name} expiró`,tipo:'gold'});} }
+    // BF
+    if(ns.bf){dmg=Math.round(dmg*2.5);extras.push('⚡ BLACK FLASH ×2.5');ns.bf=false;}
+    // Contrato mult
     if(myP2.contrato?.ok){ const par=PARES[myP2.contrato.pairIdx]; if(par?.rec.mult){dmg=Math.round(dmg*par.rec.mult);extras.push(`×${par.rec.mult}`);myP2.contrato.recUses--;if(myP2.contrato.recUses<=0)myP2.contrato.ok=false;} }
     // Crit
     if(action.ai===2&&myP2.critCarga&&Math.random()<0.35){dmg=Math.round(dmg*2);extras.push('¡CRÍTICO!');}
+    // Corte de Eclipse active
+    if(myP2.corteEclipseActivo){ if(rivP2.hp<rivP2.maxHp*0.5){dmg=Math.round(dmg*2);extras.push('🌘 Eclipse ×2');} myP2.corteEclipseActivo=false; }
+    // Rueda skill
+    if(myP2.ruedaSkill==='corte_eclipse'&&rivP2.hp<rivP2.maxHp*0.5){dmg=Math.round(dmg*2);extras.push('🌘 Eclipse (Rueda)');}
+    if(myP2.ruedaSkill==='tecnica_invertida'){ /* handled on receive */ }
     // Lifesteal
     if(myP2.lifesteal){myP2.hp=Math.min(myP2.maxHp,myP2.hp+8);extras.push('+8 HP');}
-    // Shield
-    if(rivP2.shield>0){const abs=Math.min(rivP2.shield,dmg);dmg-=abs;rivP2.shield=0;extras.push(`Escudo −${abs}`);}
-    rivP2.hp=Math.max(0,rivP2.hp-dmg);
+    // Shield (rival)
+    if(rivP2.shield>0){ const abs=Math.min(rivP2.shield,dmg);dmg-=abs;rivP2.shield=0;extras.push(`Escudo −${abs}`);}
+    // Técnica Invertida (rival)
+    if(rivP2.tecnicaInv){ rivP2.hp=Math.min(rivP2.maxHp,rivP2.hp+dmg); rivP2.tecnicaInv=false; logs.push({msg:`💠 ${rivP2.name} absorbe el daño como curación (+${dmg} HP)`,tipo:'flash'}); dmg=0; }
+    if(dmg>0) rivP2.hp=Math.max(0,rivP2.hp-dmg);
     const ex=extras.length?` (${extras.join(', ')})` : '';
-    logEntries.push({msg:`${myP2.name} usa ${atk.n} → ${dmg} daño${ex}`,tipo:mySlot==='p1'?'blue':'red'});
-    ns.pendingDmg={dmg,targetSlot:rivSlot()};
-    // Tick contrato
-    const c=myP2.contrato;
-    if(c?.activo&&!c.ok&&!c.fail){c.hits++;if(c.hits>=c.need){const par=PARES[c.pairIdx];c.ok=true;if(par?.rec.heal){myP2.hp=Math.min(myP2.maxHp,myP2.hp+par.rec.heal);c.ok=false;logEntries.push({msg:`📜 Contrato cumplido — ${myP2.name} cura ${par.rec.heal} HP`,tipo:'green'});}else{c.recUses=par?.rec.uses||0;logEntries.push({msg:`📜 ¡${myP2.name} cumple el contrato! ${par.rec.label}`,tipo:'green'});}}}
-
+    logs.push({msg:`${myP2.name} usa ${atk.n} → ${dmg} daño${ex}`,tipo:mySlot==='p1'?'blue':'red'});
+    ns.pendingEvent={key:evKey,type:'dmg',dmg,targetSlot:rivSlot()};
+    // Contrato hit
+    tickContratoHit(myP2,rivP2,logs,ns);
+    // Rueda del Juicio tick
+    if(has('rueda_juicio')){ tickRueda(myP2,logs,ns,evKey); }
+ 
   } else if(action.type==='rest'){
     myP2.energy=Math.min(MAX_E,myP2.energy+2);
-    logEntries.push({msg:`${myP2.name} descansa — recupera energía`,tipo:''});
-    const c=myP2.contrato;
-    if(c?.activo&&!c.ok&&!c.fail){c.fail=true;const par=PARES[c.pairIdx];if(par?.sac.id==='s1'){myP2.hp=Math.max(0,myP2.hp-20);logEntries.push({msg:`🩸 Contrato fallado — ${myP2.name} pierde 20 HP`,tipo:'red'});}if(par?.sac.id==='s2'){myP2.hp=Math.max(0,myP2.hp-40);logEntries.push({msg:`🩸 Contrato fallado — ${myP2.name} pierde 40 HP`,tipo:'red'});}if(par?.sac.id==='s3'){myP2.energy=0;logEntries.push({msg:`🩸 Contrato fallado — ${myP2.name} pierde toda la energía`,tipo:'red'});}}
-
+    logs.push({msg:`${myP2.name} descansa — recupera energía`,tipo:''});
+    tickContratoFail(myP2,logs);
+    // Rueda resets on rest
+    if(has('rueda_juicio')&&myP2.ruedaGiros>0){ myP2.ruedaGiros=0; logs.push({msg:`🎡 Rueda reiniciada por descanso`,tipo:'curse'}); }
+ 
   } else if(action.type==='bruja'){
     const ef=getBrujaEf(); myP2.bruja.cargas--;
-    if(ef.heal){myP2.hp=Math.min(myP2.maxHp,myP2.hp+ef.heal);}else{myP2.bruja.activo=true;myP2.bruja.efecto=ef;}
-    logEntries.push({msg:`⚗ ${myP2.name} → Factor Bruja: ${ef.desc}`,tipo:'curse'});
-    ns.pendingBruja={ef,who:mySlot};
-    changeTurn=false; // Bruja no cambia turno
-
+    if(ef.heal){myP2.hp=Math.min(myP2.maxHp,myP2.hp+ef.heal);}
+    else{myP2.bruja.activo=true;myP2.bruja.efecto=ef;}
+    logs.push({msg:`⚗ ${myP2.name} → Factor Bruja: ${ef.desc}`,tipo:'curse'});
+    ns.pendingEvent={key:evKey,type:'bruja',ef,who:mySlot};
+    changeTurn=false;
+ 
   } else if(action.type==='dominio'){
     myP2.dominio.cargas--;
     if(rivP2.dominio?.activo){
       rivP2.dominio.activo=false; rivP2.dominio.left=0; ns.bf=true;
-      logEntries.push({msg:`💥 DOMINIO CLASH — ${myP2.name} vs ${rivP2.name}!`,tipo:'gold'});
-      ns.pendingDominio={clash:true,who:mySlot};
+      logs.push({msg:`💥 DOMINIO CLASH — ${myP2.name} vs ${rivP2.name}!`,tipo:'gold'});
+      ns.pendingEvent={key:evKey,type:'dominio_clash',who:mySlot};
     } else {
       myP2.dominio.activo=true; myP2.dominio.left=3;
-      const dpas=Math.round(rivP2.hp*0.30); rivP2.hp=Math.max(0,rivP2.hp-dpas);
-      logEntries.push({msg:`🔥 ${myP2.name}: "${myP2.dom}" — ${dpas} daño pasivo`,tipo:'gold'});
-      ns.pendingDominio={clash:false,who:mySlot,dom:myP2.dom};
+      const dpas=Math.round(rivP2.hp*0.30);
+      if(rivP2.domInmune){ logs.push({msg:`🛡 ${rivP2.name} es inmune al dominio (Rueda)`,tipo:'flash'}); }
+      else { rivP2.hp=Math.max(0,rivP2.hp-dpas); logs.push({msg:`🔥 ${myP2.name}: "${myP2.dom}" — ${dpas} daño pasivo`,tipo:'gold'}); }
+      // Broadcast to BOTH clients via pendingEvent
+      ns.pendingEvent={key:evKey,type:'dominio',who:mySlot,domName:myP2.dom,dmg:dpas};
     }
     changeTurn=false;
-
+ 
   } else if(action.type==='contrato'){
     myP2.contrato.cargas--; myP2.contrato.activo=true; myP2.contrato.pairIdx=action.pairIdx;
     myP2.contrato.hits=0; myP2.contrato.need=3; myP2.contrato.ok=false; myP2.contrato.fail=false;
     const par=PARES[action.pairIdx]; myP2.contrato.recUses=par.rec.uses||0;
-    logEntries.push({msg:`📜 ${myP2.name} firma: "${par.sac.label}" → "${par.rec.label}"`,tipo:'green'});
+    logs.push({msg:`📜 ${myP2.name} firma: "${par.sac.label}" → "${par.rec.label}"`,tipo:'green'});
     changeTurn=false;
-
+ 
   } else if(action.type==='eco'){
     myP2.ecoActivo=true;
-    logEntries.push({msg:`👁 ${myP2.name} activa Eco Maldito`,tipo:'flash'});
+    logs.push({msg:`👁 ${myP2.name} activa Eco Maldito — próximo ataque al máximo`,tipo:'flash'});
+    changeTurn=false;
+ 
+  } else if(action.type==='corte_eclipse'){
+    myP2.energy-=1; myP2.corteEclipseActivo=true;
+    logs.push({msg:`🌘 ${myP2.name} activa Corte de Eclipse`,tipo:'flash'});
+    changeTurn=false;
+ 
+  } else if(action.type==='paradoja_temporal'){
+    if(myP2.lastAtk===null) return;
+    myP2.energy-=2;
+    const origAtk=ATAQUES[myP2.lastAtk];
+    let dmg=Math.round(rng(origAtk.min,origAtk.max)*0.6);
+    if(rivP2.shield>0){const abs=Math.min(rivP2.shield,dmg);dmg-=abs;rivP2.shield=0;}
+    if(rivP2.tecnicaInv){rivP2.hp=Math.min(rivP2.maxHp,rivP2.hp+dmg);rivP2.tecnicaInv=false;dmg=0;}
+    if(dmg>0)rivP2.hp=Math.max(0,rivP2.hp-dmg);
+    logs.push({msg:`⏳ ${myP2.name} → Paradoja: ${dmg} daño (60% de ${origAtk.n})`,tipo:'flash'});
+    ns.pendingEvent={key:evKey,type:'dmg',dmg,targetSlot:rivSlot()};
+ 
+  } else if(action.type==='tecnica_invertida'){
+    myP2.tecnicaInv=true;
+    logs.push({msg:`💠 ${myP2.name} activa Técnica Invertida — absorberá el próximo daño`,tipo:'flash'});
+    ns.pendingEvent={key:evKey,type:'generic',title:'TÉCNICA INVERTIDA',body:`${myP2.name} convertirá el próximo daño en curación`};
+    changeTurn=false;
+ 
+  } else if(action.type==='ruptura_dominio'){
+    rivP2.dominio.activo=false; rivP2.dominio.left=0;
+    logs.push({msg:`💥 ${myP2.name} rompe el dominio de ${rivP2.name}!`,tipo:'gold'});
+    ns.pendingEvent={key:evKey,type:'generic',title:'RUPTURA DE DOMINIO',body:`El dominio de ${rivP2.name} ha sido cancelado`};
     changeTurn=false;
   }
-
+ 
   ns[mySlot]=myP2; ns[rivSlot()]=rivP2;
-
+ 
   if(changeTurn){
     const nxt=rivSlot(); const nxtP=ns[nxt];
     if(nxtP.energy<MAX_E) nxtP.energy=Math.min(MAX_E,nxtP.energy+1);
     ns.turn=nxt; ns[nxt]=nxtP;
     if(rivP2.hp<=0||myP2.hp<=0){ ns.status='finished'; ns.winner=rivP2.hp<=0?mySlot:rivSlot(); }
   }
-
-  const prevLog=ns.log||[];
-  ns.log=[...prevLog,...logEntries].slice(-50);
+ 
+  ns.log=[...(ns.log||[]),...logs].slice(-60);
   set(ref(db,`rooms/${roomId}`),ns);
 }
-
-// ── SYNC FROM FIREBASE ──
+ 
+// ── Contrato helpers ──
+function tickContratoHit(myP2,rivP2,logs,ns){
+  const c=myP2.contrato; if(!c?.activo||c.ok||c.fail)return;
+  c.hits++;
+  if(c.hits>=c.need){
+    const par=PARES[c.pairIdx]; c.ok=true;
+    if(par?.rec.heal){ myP2.hp=Math.min(myP2.maxHp,myP2.hp+par.rec.heal); c.ok=false; logs.push({msg:`📜 Contrato cumplido — ${myP2.name} cura ${par.rec.heal} HP`,tipo:'green'}); }
+    else if(par?.rec.swap){ const tmp=myP2.hp; myP2.hp=rivP2.hp; rivP2.hp=tmp; c.ok=false; logs.push({msg:`🔀 ¡INTERCAMBIO FORZADO! ${myP2.name} ↔ ${rivP2.name}`,tipo:'flash'}); }
+    else { c.recUses=par?.rec.uses||0; logs.push({msg:`📜 ¡${myP2.name} cumple el contrato! ${par.rec.label}`,tipo:'green'}); }
+  }
+}
+function tickContratoFail(myP2,logs){
+  const c=myP2.contrato; if(!c?.activo||c.ok||c.fail)return;
+  c.fail=true; const par=PARES[c.pairIdx];
+  if(par?.sac.id==='s1'){myP2.hp=Math.max(0,myP2.hp-20);logs.push({msg:`🩸 Contrato fallado — ${myP2.name} pierde 20 HP`,tipo:'red'});}
+  if(par?.sac.id==='s2'){myP2.hp=Math.max(0,myP2.hp-40);logs.push({msg:`🩸 Contrato fallado — ${myP2.name} pierde 40 HP`,tipo:'red'});}
+  if(par?.sac.id==='s3'){myP2.energy=0;logs.push({msg:`🩸 Contrato fallado — ${myP2.name} pierde toda la energía`,tipo:'red'});}
+  if(par?.sac.id==='s4'){myP2.hp=Math.max(0,myP2.hp-35);logs.push({msg:`🩸 Intercambio fallado — ${myP2.name} pierde 35 HP`,tipo:'red'});}
+}
+ 
+// ── Rueda del Juicio tick ──
+function tickRueda(myP2,logs,ns,evKey){
+  if(!myP2.ruedaSkill){ myP2.ruedaGiros=(myP2.ruedaGiros||0)+1; }
+  if(myP2.ruedaGiros>=3&&!myP2.ruedaSkill){
+    const skill=RUEDA_SKILLS[Math.floor(Math.random()*RUEDA_SKILLS.length)];
+    myP2.ruedaSkill=skill.id; myP2.ruedaGiros=0;
+    logs.push({msg:`🎡 ¡RUEDA COMPLETA! ${myP2.name} obtiene: ${skill.name}`,tipo:'curse'});
+    ns.pendingEvent={key:evKey,type:'rueda',skillId:skill.id,skillName:skill.name,skillDesc:skill.desc,giros:3,who:mySlot};
+  }
+}
+ 
+// ══ SYNC FROM FIREBASE ══
 function syncEstado(data){
-  const prev=JSON.parse(JSON.stringify(G));
-  G=data;
+  G=JSON.parse(JSON.stringify(data));
   renderHUD(); renderTurn(); renderPanels();
   // New log
   const logArr=data.log||[];
   logArr.slice(lastLogLen).forEach(e=>log(e.msg,e.tipo||''));
   lastLogLen=logArr.length;
-  // Damage popup
-  if(data.pendingDmg){
-    dmgPopup(data.pendingDmg.dmg,data.pendingDmg.targetSlot);
-    if(isMyTurn()) update(ref(db,`rooms/${roomId}`),{pendingDmg:null});
-  }
-  // Bruja overlay
-  if(data.pendingBruja){
-    mostrarBrujaOverlay(data.pendingBruja.ef);
-    setTimeout(()=>cerrarOverlay('overlay-bruja'),2000);
-    if(isMyTurn()) update(ref(db,`rooms/${roomId}`),{pendingBruja:null});
-  }
-  // Dominio overlay
-  if(data.pendingDominio){
-    const pd=data.pendingDominio;
-    if(pd.clash){
-      abrirOverlay('overlay-bf'); let cd=3; document.getElementById('bf-cd').textContent=cd;
-      const iv=setInterval(()=>{cd--;document.getElementById('bf-cd').textContent=cd;if(cd<=0){clearInterval(iv);cerrarOverlay('overlay-bf');}},1000);
-    } else {
-      const who=data[pd.who];
-      document.getElementById('dom-label').textContent=`${who?.name||''} — EXPANSIÓN DE DOMINIO`;
-      document.getElementById('dom-name').textContent=who?.dom||'Dominio';
+ 
+  // ── EVENTS — shown to BOTH players ──
+  const ev=data.pendingEvent;
+  if(ev&&!shownOverlays.has(ev.key)){
+    shownOverlays.add(ev.key);
+ 
+    if(ev.type==='dmg'){ dmgPopup(ev.dmg,ev.targetSlot); }
+ 
+    else if(ev.type==='bruja'){
+      mostrarBrujaOverlay(ev.ef);
+      setTimeout(()=>cerrarOverlay('overlay-bruja'),2000);
+    }
+ 
+    else if(ev.type==='dominio'){
+      // Show dominio overlay on BOTH screens
+      document.getElementById('dom-label').textContent=`${data[ev.who]?.name||''} — EXPANSIÓN DE DOMINIO`;
+      document.getElementById('dom-name').textContent=data[ev.who]?.dom||'Dominio';
       document.getElementById('dom-effect').textContent='+80% daño · −30% HP rival · 3 turnos';
       abrirOverlay('overlay-dominio');
       setTimeout(()=>cerrarOverlay('overlay-dominio'),2800);
     }
-    if(isMyTurn()) update(ref(db,`rooms/${roomId}`),{pendingDominio:null});
+ 
+    else if(ev.type==='dominio_clash'){
+      abrirOverlay('overlay-bf');
+      let cd=3; document.getElementById('bf-cd').textContent=cd;
+      const iv=setInterval(()=>{ cd--; document.getElementById('bf-cd').textContent=cd; if(cd<=0){clearInterval(iv);cerrarOverlay('overlay-bf');} },1000);
+    }
+ 
+    else if(ev.type==='rueda'){
+      document.getElementById('rueda-skill').textContent=ev.skillName;
+      const prog=document.getElementById('rueda-progress'); prog.innerHTML='';
+      for(let i=0;i<3;i++){const pip=document.createElement('div');pip.className='rueda-pip done';prog.appendChild(pip);}
+      document.getElementById('rueda-hint').textContent=ev.skillDesc;
+      abrirOverlay('overlay-rueda');
+      setTimeout(()=>cerrarOverlay('overlay-rueda'),3000);
+    }
+ 
+    else if(ev.type==='generic'){
+      document.getElementById('generic-title').textContent=ev.title;
+      document.getElementById('generic-body').textContent=ev.body;
+      abrirOverlay('overlay-generic');
+      setTimeout(()=>cerrarOverlay('overlay-generic'),2200);
+    }
+ 
+    // Clear the event after processing (only the active player clears)
+    if(isMyTurn()) update(ref(db,`rooms/${roomId}`),{pendingEvent:null});
   }
 }
-
-// ── END ──
-function mostrarFin(data){
-  const iWon=data.winner===mySlot;
-  const xpG=iWon?80:30, coinG=iWon?50:15;
-  const prevLv=getLevel(ME.xp); ME.xp+=xpG; ME.coins+=coinG; saveME();
-  const newLv=getLevel(ME.xp), lvUp=newLv>prevLv;
-  sw('screen-end');
-  document.getElementById('end-title').textContent=iWon?'VICTORIA':'DERROTA';
-  document.getElementById('end-title').style.color=iWon?'var(--gold2)':'var(--red)';
-  document.getElementById('end-winner-text').textContent=`${data[data.winner]?.name||'?'} gana el duelo`;
-  document.getElementById('end-rewards').innerHTML=`
-    <div class="end-rewards-title">Recompensas obtenidas</div>
-    <div class="reward-row"><span>XP ganada</span><span class="reward-val">+${xpG} XP</span></div>
-    <div class="reward-row"><span>Monedas</span><span class="reward-val">+${coinG} ⬡</span></div>
-    <div class="reward-row"><span>Nivel actual</span><span class="reward-val">LVL ${newLv}${lvUp?' ⬆ SUBISTE!':''}</span></div>
-    <div class="reward-row"><span>Monedas totales</span><span class="reward-val">⬡ ${ME.coins}</span></div>`;
-  document.getElementById('end-stats').innerHTML=`
-    <div class="stat-box"><span class="stat-val">${data[mySlot]?.hp||0}</span>HP restante</div>
-    <div class="stat-box"><span class="stat-val">LVL ${newLv}</span>Mi nivel</div>
-    <div class="stat-box"><span class="stat-val">⬡ ${ME.coins}</span>Mis monedas</div>`;
-  remove(ref(db,`rooms/${roomId}`));
-  limpiarRoom();
-}
-
-// ── BRUJA ──
-function getBrujaEf(){
-  const r=Math.random();
-  if(r<.20) return {tipo:'neg',desc:'−30% daño este turno',mult:0.7};
-  if(r<.35) return {tipo:'neg',desc:'−15% daño este turno',mult:0.85};
-  if(r<.55) return {tipo:'pos',desc:'+30% daño este turno',mult:1.3};
-  if(r<.72) return {tipo:'pos',desc:'+50% daño este turno',mult:1.5};
-  if(r<.87) return {tipo:'pos',desc:'Doble daño este turno',mult:2.0};
-  return {tipo:'pos',desc:'Cura 20 HP',mult:1.0,heal:20};
-}
-function mostrarBrujaOverlay(ef){
-  document.getElementById('bruja-efecto-text').textContent=ef.desc;
-  document.getElementById('bruja-efecto-text').className='bruja-efecto '+(ef.tipo==='pos'?'pos':'neg');
-  document.getElementById('bruja-sub-text').textContent=ef.tipo==='pos'?'✦ efecto positivo':'✦ efecto negativo';
-  abrirOverlay('overlay-bruja');
-}
-
-// ── CONTRATO UI ──
+ 
+// ══ END ══
+function mostrarFin(data){ const iWon=data.winner===mySlot; const xpG=iWon?80:30,coinG=iWon?50:15; const prevLv=getLevel(ME.xp); ME.xp+=xpG; ME.coins+=coinG; saveME(); const newLv=getLevel(ME.xp),lvUp=newLv>prevLv; sw('screen-end'); document.getElementById('end-title').textContent=iWon?'VICTORIA':'DERROTA'; document.getElementById('end-title').style.color=iWon?'var(--gold2)':'var(--red)'; document.getElementById('end-winner-text').textContent=`${data[data.winner]?.name||'?'} gana el duelo`; document.getElementById('end-rewards').innerHTML=`<div class="end-rewards-title">Recompensas obtenidas</div><div class="reward-row"><span>XP ganada</span><span class="reward-val">+${xpG} XP</span></div><div class="reward-row"><span>Monedas</span><span class="reward-val">+${coinG} ⬡</span></div><div class="reward-row"><span>Nivel actual</span><span class="reward-val">LVL ${newLv}${lvUp?' ⬆ SUBISTE!':''}</span></div><div class="reward-row"><span>Monedas totales</span><span class="reward-val">⬡ ${ME.coins}</span></div>`; document.getElementById('end-stats').innerHTML=`<div class="stat-box"><span class="stat-val">${Math.max(0,data[mySlot]?.hp||0)}</span>HP restante</div><div class="stat-box"><span class="stat-val">LVL ${newLv}</span>Mi nivel</div><div class="stat-box"><span class="stat-val">⬡ ${ME.coins}</span>Mis monedas</div>`; try{remove(ref(db,`rooms/${roomId}`));}catch(e){} limpiarRoom(); }
+ 
+// ══ BRUJA ══
+function getBrujaEf(){ const r=Math.random(); if(r<.20)return{tipo:'neg',desc:'−30% daño este turno',mult:0.7}; if(r<.35)return{tipo:'neg',desc:'−15% daño este turno',mult:0.85}; if(r<.55)return{tipo:'pos',desc:'+30% daño este turno',mult:1.3}; if(r<.72)return{tipo:'pos',desc:'+50% daño este turno',mult:1.5}; if(r<.87)return{tipo:'pos',desc:'Doble daño este turno',mult:2.0}; return{tipo:'pos',desc:'Cura 20 HP',mult:1.0,heal:20}; }
+function mostrarBrujaOverlay(ef){ document.getElementById('bruja-efecto-text').textContent=ef.desc; document.getElementById('bruja-efecto-text').className='bruja-efecto '+(ef.tipo==='pos'?'pos':'neg'); document.getElementById('bruja-sub-text').textContent=ef.tipo==='pos'?'✦ efecto positivo':'✦ efecto negativo'; abrirOverlay('overlay-bruja'); }
+ 
+// ══ CONTRATO UI ══
 window.abrirContrato=function(){
-  if(!isMyTurn()) return;
+  if(!isMyTurn())return;
+  // Standard 3 pairs (exclude intercambio_forzado pair index 3)
   document.getElementById('contrato-body').innerHTML=`<strong>${myP().name}</strong> firma un contrato maldito.<br>Consigue <strong>3 ataques seguidos</strong> sin descansar.`;
   const el=document.getElementById('contrato-pairs'); el.innerHTML=''; pendPairIdx=null;
-  PARES.forEach((par,idx)=>{
+  PARES.slice(0,3).forEach((par,idx)=>{
     const row=document.createElement('div'); row.className='pair-row';
     row.innerHTML=`<div class="pair-half sac-half" onclick="selPair(${idx})"><div class="pair-label sac">🩸 Sacrificio</div><div class="pair-text">${par.sac.label}</div></div><div class="pair-arrow">↔</div><div class="pair-half rec-half" onclick="selPair(${idx})"><div class="pair-label rec">✦ Recompensa</div><div class="pair-text">${par.rec.label}</div></div>`;
     el.appendChild(row);
   });
   abrirOverlay('overlay-contrato');
 };
+ 
+window.abrirContratoIntercambio=function(){
+  if(!isMyTurn())return;
+  document.getElementById('contrato-body').innerHTML=`<strong>${myP().name}</strong> firma el contrato de Intercambio Forzado.<br>Logra <strong>3 ataques seguidos</strong> sin descansar.`;
+  const el=document.getElementById('contrato-pairs'); el.innerHTML=''; pendPairIdx=3;
+  const par=PARES[3];
+  const row=document.createElement('div'); row.className='pair-row';
+  row.innerHTML=`<div class="pair-half sac-half selected"><div class="pair-label sac">🩸 Sacrificio</div><div class="pair-text">${par.sac.label}</div></div><div class="pair-arrow">↔</div><div class="pair-half rec-half selected"><div class="pair-label rec">✦ Recompensa</div><div class="pair-text">${par.rec.label}</div></div>`;
+  el.appendChild(row);
+  abrirOverlay('overlay-contrato');
+};
+ 
 window.selPair=function(idx){ pendPairIdx=idx; document.querySelectorAll('.pair-row').forEach((row,i)=>row.querySelectorAll('.pair-half').forEach(h=>h.classList.toggle('selected',i===idx))); };
 window.confirmarContrato=function(){ if(pendPairIdx===null){toast('Elige un par');return;} cerrarOverlay('overlay-contrato'); doAccion({type:'contrato',pairIdx:pendPairIdx}); };
-function verContrato(p){
-  const c=p.contrato, par=PARES[c.pairIdx];
-  document.getElementById('cst-body').innerHTML=`<span class="contrato-sac">Sacrificio: ${par?.sac.label}</span><br><span class="contrato-rec">Recompensa: ${par?.rec.label}</span>`;
-  const prog=document.getElementById('cst-progress'); prog.innerHTML='';
-  for(let i=0;i<c.need;i++){const pip=document.createElement('div');pip.className='cp-pip'+(i<c.hits?' done':'');prog.appendChild(pip);}
-  abrirOverlay('overlay-contrato-status');
-}
-
-// ── INIT ──
-if(loadME()&&ME.name){
-  document.getElementById('auth-name').value=ME.name;
-  document.getElementById('auth-dominio').value=ME.dom;
-}
-// Clean stale queue entries on load
-get(ref(db,'queue')).then(snap=>{ if(snap.exists()) Object.entries(snap.val()).forEach(([k,v])=>{ if(Date.now()-v.ts>120000) remove(ref(db,`queue/${k}`)); }); });
+ 
+function verContrato(p){ const c=p.contrato,par=PARES[c.pairIdx]; document.getElementById('cst-body').innerHTML=`<span class="contrato-sac">Sacrificio: ${par?.sac.label}</span><br><span class="contrato-rec">Recompensa: ${par?.rec.label}</span>`; const prog=document.getElementById('cst-progress'); prog.innerHTML=''; for(let i=0;i<c.need;i++){const pip=document.createElement('div');pip.className='cp-pip'+(i<c.hits?' done':'');prog.appendChild(pip);} abrirOverlay('overlay-contrato-status'); }
+ 
+// ══ INIT ══
+if(loadME()&&ME.name){ document.getElementById('auth-name').value=ME.name; document.getElementById('auth-dominio').value=ME.dom; }
+get(ref(db,'queue')).then(snap=>{ if(snap.exists()) Object.entries(snap.val()).forEach(([k,v])=>{ if(Date.now()-v.ts>120000) remove(ref(db,`queue/${k}`)); }); }).catch(()=>{});
 </script>
 </body>
 </html>
